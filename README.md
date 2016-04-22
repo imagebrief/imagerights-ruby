@@ -40,9 +40,6 @@ ImageRights.configure do |c|
 end
 ```
 
-
-All functions are accessible through the ImageRights::User class. 
-
 ### Creating up a new user account
 
 This takes a hash containing, email and first and last name. A user with a valid auth key is returned.
