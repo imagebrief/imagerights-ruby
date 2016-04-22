@@ -22,9 +22,13 @@ gem 'image_rights'
 ```
 or 
 
-```ruby
+```shell
 gem install image_rights
 ```
+
+## Usage
+
+### Initialization
 
 You will need to have a Partner Key provided to you by ImageRights. This is used to authenticate every request. 
 
@@ -35,17 +39,29 @@ ImageRights.configure do |c|
   c.partner_key = ENV["IMAGERIGHTS_TEST_KEY"]
 end
 ```
-## Usage
+
 
 All functions are accessible through the ImageRights::User class. 
 
-### Setting up a new user
+### Creating up a new user account
 
-This takes a hash containing, email and first and last name. 
+This takes a hash containing, email and first and last name. A user with a valid auth key is returned.
 
 ```ruby 
 ImageRights::User.create_account({email: 'test@example.com', first_name: 'Harry', last_name: 'Curotta'})
 # => #<ImageRights::User:0x007ff224ac8c08 @auth_key="IB.13395.1234567890">
+```
+
+### Setting the user's account plan level
+
+This takes a plan name string, currently the options are 
+* basic
+* pro
+* premier
+
+```ruby 
+ImageRights::User.set_account_leve("basic")
+# => true
 ```
 
 ### Verifying an existing auth token
@@ -57,3 +73,65 @@ user = ImageRights::User.new("IB.13395.1234567890")
 user.verify_login
 # => true
 ```
+
+### Generating a one-time login URL
+
+A one-time login url can be retrieved. Users can visit this URL to bypass the login screen. 
+
+```ruby
+user = ImageRights::User.new("IB.13395.1234567890")
+user.verify_login
+# => "https://www.imagerights.com/login_once/IB.13395.1234567890"
+```
+
+### Upload Images
+
+Images can be uploaded by providing a hash containing the following: 
+
+|      Key    |  Type  | Required | Default      |
+|-------------|--------|----------|--------------|
+| :path       | String |     Y    |              |
+| :mime_type  | String |     N    | "image/jpg"  | 
+| :imageset   | String |     N    | "api_upload" |
+
+The method will return an image object with an image_id and the owning user.
+
+```ruby 
+image_details = { path: '/abc/image.jpg',
+                  mime_type: 'image/jpg',
+                  imageset: 'test set' }
+
+user = ImageRights::User.new("IB.13395.1234567890")
+user.upload_image(image_details)
+# => #<ImageRights::Image:0x007f8586153a20 @image_id="3810422", @user=#<ImageRights::User:0x007f85848ab2c0 @auth_key="IB.13395.1234567890">>
+```
+
+### Delete Images
+
+Images can be removed from ImageRights by passing a valid image_id to the the delete_image method. This will return true even if the image does not exist. 
+
+```ruby
+user = ImageRights::User.new("IB.13395.1234567890")
+user.delete_image("3810422")
+# => true
+```
+
+## Contributing
+
+Fork it
+Create your feature branch (git checkout -b my-new-feature)
+Commit your changes (git commit -am 'Add some feature')
+Push to the branch (git push origin my-new-feature)
+Create new Pull Request
+
+The test suit can be run by executing 
+
+```shell
+rake test
+```
+
+
+
+
+
+
