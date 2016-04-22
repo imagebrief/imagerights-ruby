@@ -19,12 +19,12 @@ To get started, include the gem in your Gemfile
 
 ```ruby 
 gem 'image_rights'
-
+```
 or 
 
 ```ruby
 gem install image_rights
-
+```
 
 You will need to have a Partner Key provided to you by ImageRights. This is used to authenticate every request. 
 
@@ -34,7 +34,7 @@ You must initialize the library with this.
 ImageRights.configure do |c|
   c.partner_key = ENV["IMAGERIGHTS_TEST_KEY"]
 end
-
+```
 ## Usage
 
 All functions are accessible through the ImageRights::User class. 
@@ -46,7 +46,7 @@ This takes a hash containing, email and first and last name.
 ```ruby 
 ImageRights::User.create_account({email: 'test@example.com', first_name: 'Harry', last_name: 'Curotta'})
 # => #<ImageRights::User:0x007ff224ac8c08 @auth_key="IB.13395.1234567890">
-
+```
 
 ### Verifying an existing auth token
 
@@ -56,4 +56,4 @@ Auth tokens should not expire, but they can be checked for validity.
 user = ImageRights::User.new("IB.13395.1234567890")
 user.verify_login
 # => true
-
+```
