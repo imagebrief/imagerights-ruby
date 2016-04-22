@@ -21,6 +21,15 @@ module ImageRights
       return response.body == "OK"
     end
 
+    def upload_image(image_details)
+      ImageRights::Image.upload_image(self, image_details)
+    end
+
+    def delete_image(image_id)
+      image = ImageRights::Image.new(self, image_id)
+      image.delete
+    end
+
     # Class Methods
 
     def self.create_account(account_fields={})
