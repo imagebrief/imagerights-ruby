@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.imagerights.com/api/v1/tool/delete
+    body:
+      encoding: UTF-8
+      string: auth_key=IB.13394.7EF303DB20115CA51420B84E&image_id=3809193&partner_key=IB382jc0482m0c2483923fd23c25
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 21 Apr 2016 23:54:31 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - XSRF-TOKEN=UuUkRZXrgLPhKYwP4Gjlv%2Fy5p7aEZhcRPaI5AnyFclM%3D; path=/
+      - __cfduid=deeec98f3d56c0fc96b8dfb642f433c951461282871; expires=Fri, 21-Apr-17
+        23:54:31 GMT; path=/; domain=.imagerights.com; HttpOnly
+      - _imagerights_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTBlNjAxNzE5MmU3ZTFhY2JkYTEzOTU0Zjg5N2EwOWU0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVV1VWtSWlhyZ0xQaEtZd1A0R2psdi95NXA3YUVaaGNSUGFJNUFueUZjbE09BjsARg%3D%3D--fd8bde0800ca6787ff94265bf1cb6db292c41ce2;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - acca99f8-3d63-4170-b47e-8bbd851b0a1d
+      X-Runtime:
+      - '0.029384'
+      X-Rack-Cache:
+      - invalidate, pass
+      Via:
+      - 1.1 vegur
+      Cf-Ray:
+      - 2974c2f88b324728-EWR
+    body:
+      encoding: UTF-8
+      string: OK
+    http_version: 
+  recorded_at: Thu, 21 Apr 2016 23:54:31 GMT
+recorded_with: VCR 3.0.1

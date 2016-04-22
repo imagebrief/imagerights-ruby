@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.imagerights.com/api/v1/tool/verify_login
+    body:
+      encoding: UTF-8
+      string: auth_key=xyz&partner_key=IB382jc0482m0c2483923fd23c25
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 21 Apr 2016 21:38:32 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da189e18356c4817d0c7779dc4abaa5571461274711; expires=Fri, 21-Apr-17
+        21:38:31 GMT; path=/; domain=.imagerights.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 403 Forbidden
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c2f6d789-da3a-40ae-9352-e1ec35d52c14
+      X-Runtime:
+      - '0.085988'
+      X-Rack-Cache:
+      - invalidate, pass
+      Via:
+      - 1.1 vegur
+      Cf-Ray:
+      - 2973fbc11e1518a0-EWR
+    body:
+      encoding: UTF-8
+      string: LOGIN_FAIL
+    http_version: 
+  recorded_at: Thu, 21 Apr 2016 21:38:32 GMT
+recorded_with: VCR 3.0.1

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.imagerights.com/api/v1/tool/make_get_account
+    body:
+      encoding: UTF-8
+      string: email=harry%2Birtest%40imagebrief.com&first_name=Test&last_name=Person&partner_key=IB382jc0482m0c2483923fd23c25
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 21 Apr 2016 20:07:03 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - XSRF-TOKEN=gC6j2VO70Etk531IEK6XLkNJVXrDxddWZHCVpMBd5hs%3D; path=/
+      - __cfduid=df1de68f0cf738a9d68da1a24862408bc1461269222; expires=Fri, 21-Apr-17
+        20:07:02 GMT; path=/; domain=.imagerights.com; HttpOnly
+      - _imagerights_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTMwZGE3MWZkMGI3ZjEwZGU2Yjc2NGU4MzM1YWU4YjljBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWdDNmoyVk83MEV0azUzMUlFSzZYTGtOSlZYckR4ZGRXWkhDVnBNQmQ1aHM9BjsARg%3D%3D--300cb1b382c67861454b845317276c2b75a52905;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 60606159-0128-4b7a-836b-472ca1f5e69d
+      X-Runtime:
+      - '0.305247'
+      X-Rack-Cache:
+      - invalidate, pass
+      Via:
+      - 1.1 vegur
+      Cf-Ray:
+      - 297375c09cc0184c-EWR
+    body:
+      encoding: UTF-8
+      string: IB.13394.7EF303DB20115CA51420B84E
+    http_version: 
+  recorded_at: Thu, 21 Apr 2016 20:07:03 GMT
+recorded_with: VCR 3.0.1
