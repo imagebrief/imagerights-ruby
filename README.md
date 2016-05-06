@@ -57,7 +57,8 @@ This takes a plan name string, currently the options are
 * premier
 
 ```ruby 
-ImageRights::User.set_account_leve("basic")
+user = ImageRights::User.new("IB.13395.1234567890")
+user.set_account_level("basic")
 # => true
 ```
 
