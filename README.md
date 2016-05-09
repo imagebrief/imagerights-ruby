@@ -83,23 +83,22 @@ user.verify_login
 
 ### Upload Images
 
-Images can be uploaded by providing a hash containing the following: 
+Images can be uploaded by providing a path and an optional hash containing the following: 
 
 |      Key    |  Type  | Required | Default      |
 |-------------|--------|----------|--------------|
-| :path       | String |     Y    |              |
 | :mime_type  | String |     N    | "image/jpg"  | 
 | :imageset   | String |     N    | "api_upload" |
 
 The method will return an image object with an image_id and the owning user.
 
 ```ruby 
-image_details = { path: '/abc/image.jpg',
-                  mime_type: 'image/jpg',
+path = '/abc/image.jpg'
+image_details = { mime_type: 'image/jpg',
                   imageset: 'test set' }
 
 user = ImageRights::User.new("IB.13395.1234567890")
-user.upload_image(image_details)
+user.upload_image(path, image_details)
 # => #<ImageRights::Image:0x007f8586153a20 @image_id="3810422", @user=#<ImageRights::User:0x007f85848ab2c0 @auth_key="IB.13395.1234567890">>
 ```
 

@@ -11,15 +11,14 @@ describe ImageRights::Image do
     before do 
       @image_path = FIXTURES_PATH + '/flatiron.jpg'
       @mime_type = 'image/jpg'
-      
-      @image_details = {
-        path: @image_path,
+
+      @optional_fields = {
         mime_type: @mime_type,
         imageset: 'test set'
       }
 
       VCR.use_cassette('upload_image') do
-        @image = ImageRights::Image.upload_image(@user, @image_details)
+        @image = ImageRights::Image.upload_image(@user, @image_path, @optional_fields)
       end
     end
 

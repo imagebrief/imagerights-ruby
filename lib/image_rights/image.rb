@@ -14,16 +14,16 @@ module ImageRights
 
     # Class methods
 
-    def self.upload_image(user, image_fields={})
+    def self.upload_image(user, path, optional_fields={})
       # image_file param is converted to a file upload type by the connection class
       
       params = {
         auth_key: user.auth_key,
-        imageset: (image_fields[:imageset] || 'api_upload'),
+        imageset: (optional_fields[:imageset] || 'api_upload'),
         image_file: {
           key: 'image', 
-          path: image_fields[:path],
-          mime_type: (image_fields[:mime_type] || 'image/jpg')
+          path: path,
+          mime_type: (optional_fields[:mime_type] || 'image/jpg')
         }
       }
 

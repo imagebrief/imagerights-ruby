@@ -21,8 +21,8 @@ module ImageRights
       return response.body == "OK"
     end
 
-    def upload_image(image_details)
-      ImageRights::Image.upload_image(self, image_details)
+    def upload_image(path, optional_fields={})
+      ImageRights::Image.upload_image(self, path, optional_fields)
     end
 
     def delete_image(image_id)
