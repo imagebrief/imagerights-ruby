@@ -57,7 +57,8 @@ This takes a plan name string, currently the options are
 * premier
 
 ```ruby 
-ImageRights::User.set_account_leve("basic")
+user = ImageRights::User.new("IB.13395.1234567890")
+user.set_account_level("basic")
 # => true
 ```
 
@@ -114,11 +115,11 @@ user.delete_image("3810422")
 
 ## Contributing
 
-Fork it
-Create your feature branch (git checkout -b my-new-feature)
-Commit your changes (git commit -am 'Add some feature')
-Push to the branch (git push origin my-new-feature)
-Create new Pull Request
+* Fork it
+* Create your feature branch (git checkout -b my-new-feature)
+* Commit your changes (git commit -am 'Add some feature')
+* Push to the branch (git push origin my-new-feature)
+* Create new Pull Request
 
 The test suit can be run by executing 
 
