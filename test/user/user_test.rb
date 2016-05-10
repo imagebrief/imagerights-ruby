@@ -111,5 +111,27 @@ describe ImageRights::User do
     end
 
   end
+
+  describe "when uploading an image" do 
+    before do 
+      @user = ImageRights::User.new(@test_auth_key)
+
+      @image_path = FIXTURES_PATH + '/flatiron.jpg'
+      @mime_type = 'image/jpg'
+
+      @optional_fields = {
+        mime_type: @mime_type,
+        imageset: 'test set'
+      }
+
+      VCR.use_cassette('upload_image') do
+        @image = @user.upload_image(@image_path, @optional_fields)
+      end
+    end
+
+    it "should save the ImageRights id to the image object" do 
+      # @image.image_id.must_equal @test_image_id
+    end
+  end
 end
 

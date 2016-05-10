@@ -35,12 +35,17 @@ module ImageRights
         key = params[:image_file][:key]
         file_path = params[:image_file][:path]
         mime_type = params[:image_file][:mime_type]
+        remote_path = params[:image_file][:remote_path]
 
         # remove old image_file key
         params.delete(:image_file)
 
         # add new key to params
-        params[key.to_sym] = Faraday::UploadIO.new(file_path, mime_type)
+        if remote_path
+          params[key.to_sym] = Faraday::UploadIO.new(open(file_path), mime_type)
+        else
+          params[key.to_sym] = Faraday::UploadIO.new(file_path, mime_type)
+        end
       end
 
       params

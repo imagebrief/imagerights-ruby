@@ -2,7 +2,6 @@ require_relative 'image_rights/user'
 require_relative 'image_rights/image'
 require_relative 'image_rights/connection'
 require_relative 'image_rights/exceptions'
-
 # Configuration block to set Partner Key
 
 module ImageRights
