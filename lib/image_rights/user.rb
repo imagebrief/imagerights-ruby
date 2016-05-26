@@ -30,6 +30,10 @@ module ImageRights
       image.delete
     end
 
+    def get_statistics
+      response = ImageRights::Connection.get('get_statistics', {auth_key: auth_key})
+    end
+
     # Class Methods
 
     def self.create_account(account_fields={})

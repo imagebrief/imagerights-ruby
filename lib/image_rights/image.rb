@@ -25,7 +25,8 @@ module ImageRights
           key: 'image', 
           path: path,
           mime_type: (optional_fields[:mime_type] || 'image/jpg'),
-          remote_path: optional_fields[:remote_path]
+          remote_path: optional_fields[:remote_path],
+          remote_filename: optional_fields[:remote_filename]
         }
       }
 

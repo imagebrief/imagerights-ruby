@@ -1,5 +1,6 @@
 require 'faraday'
 require 'json'
+require 'open-uri'
 
 module ImageRights
   class Connection 
@@ -36,13 +37,15 @@ module ImageRights
         file_path = params[:image_file][:path]
         mime_type = params[:image_file][:mime_type]
         remote_path = params[:image_file][:remote_path]
+        remote_filename = params[:image_file][:remote_filename]
 
         # remove old image_file key
         params.delete(:image_file)
 
         # add new key to params
-        if remote_path
-          params[key.to_sym] = Faraday::UploadIO.new(open(file_path), mime_type)
+        if remote_path  
+          raise ImageRights::InvalidFilenameGiven if remote_filename.blank?
+          params[key.to_sym] = Faraday::UploadIO.new(open(file_path), mime_type, remote_filename)
         else
           params[key.to_sym] = Faraday::UploadIO.new(file_path, mime_type)
         end

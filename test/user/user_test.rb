@@ -133,5 +133,19 @@ describe ImageRights::User do
       # @image.image_id.must_equal @test_image_id
     end
   end
+
+  describe "retrieving statistics" do 
+    before do 
+      @user = ImageRights::User.new(@test_auth_key)
+
+      VCR.use_cassette('get_statistics') do 
+        @statistics = @user.get_statistics
+      end
+    end
+
+    it "should be a hash" do 
+      @statistucs.must_equal nil
+    end
+  end
 end
 
