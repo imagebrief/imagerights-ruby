@@ -144,7 +144,7 @@ describe ImageRights::User do
     end
 
     it "should be a hash" do 
-      @statistucs.must_equal nil
+      @statistics.class.must_equal Hash
     end
   end
 end

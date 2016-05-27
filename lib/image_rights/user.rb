@@ -32,6 +32,7 @@ module ImageRights
 
     def get_statistics
       response = ImageRights::Connection.get('get_statistics', {auth_key: auth_key})
+      return JSON.parse(response.body)
     end
 
     # Class Methods

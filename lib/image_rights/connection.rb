@@ -13,6 +13,9 @@ module ImageRights
     end
 
     def self.get(endpoint, params)
+      response = connection.get(endpoint, pk_with_params(params))
+      parse_for_errors(response)
+      response
     end
 
 
@@ -44,7 +47,7 @@ module ImageRights
 
         # add new key to params
         if remote_path  
-          raise ImageRights::InvalidFilenameGiven if remote_filename.blank?
+          raise ImageRights::InvalidFilenameGiven if remote_filename.nil?
           params[key.to_sym] = Faraday::UploadIO.new(open(file_path), mime_type, remote_filename)
         else
           params[key.to_sym] = Faraday::UploadIO.new(file_path, mime_type)

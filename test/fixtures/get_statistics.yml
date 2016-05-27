@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.imagerights.com/api/v1/tool/get_statistics?auth_key=IB.13394.7EF303DB20115CA51420B84E&partner_key=IB382jc0482m0c2483923fd23c25
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        RnJpLCAyNyBNYXkgMjAxNiAxMTozNDozMCBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        WFNSRi1UT0tFTj1TZ2s3d2VpTEVQYkJXNEtXb1klMkJneklFVnVzb1NRQk9v
+        aFdoOGpOeWIlMkJlbyUzRDsgcGF0aD0v
+      - !binary |-
+        X19jZmR1aWQ9ZDdhYTk4YWU1ZGFhZTUxMWM3ZmQxM2FmYzFkM2MyMzU3MTQ2
+        NDM0ODg3MDsgZXhwaXJlcz1TYXQsIDI3LU1heS0xNyAxMTozNDozMCBHTVQ7
+        IHBhdGg9LzsgZG9tYWluPS5pbWFnZXJpZ2h0cy5jb207IEh0dHBPbmx5
+      - !binary |-
+        X2ltYWdlcmlnaHRzX3Nlc3Npb249QkFoN0Iwa2lEM05sYzNOcGIyNWZhV1FH
+        T2daRlZFa2lKV1poTVRBek1qZzNaVEZrWW1SaU1tWTJZbVpoTURCalpEVTRN
+        VEF3WmpWaEJqc0FWRWtpRUY5amMzSm1YM1J2YTJWdUJqc0FSa2tpTVZObmF6
+        ZDNaV2xNUlZCaVFsYzBTMWR2V1N0bmVrbEZWblZ6YjFOUlFrOXZhRmRvT0dw
+        T2VXSXJaVzg5QmpzQVJnJTNEJTNELS1iM2RiNTRhMDgxMmFjMzg3NDBjYTk3
+        YzJhM2NlYWM5NzhjNDAzNWE1OyBwYXRoPS87IEh0dHBPbmx5
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "U3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "WC1VYS1Db21wYXRpYmxl":
+      - !binary |-
+        SUU9RWRnZSxjaHJvbWU9MQ==
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "WC1SZXF1ZXN0LUlk":
+      - !binary |-
+        NDQzNmNjY2QtZjUyNi00ZmMxLWFlOWMtZTM2MWE5ZjM5ZjQ4
+      !binary "WC1SdW50aW1l":
+      - !binary |-
+        MC4zODE0MzI=
+      !binary "WC1SYWNrLUNhY2hl":
+      - !binary |-
+        bWlzcw==
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Vmlh":
+      - !binary |-
+        MS4xIHZlZ3Vy
+      !binary "U2VydmVy":
+      - !binary |-
+        Y2xvdWRmbGFyZS1uZ2lueA==
+      !binary "Q2YtUmF5":
+      - !binary |-
+        MmE5OTI4NzVjM2VhMzRjYS1MSFI=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA02OQQ6DMAwE/+IzByqVC5+J3OAGSyFBdkhbIf5eE1UqJ8v2
+        7uzuwAsGUhh3wBhhvHewqc9OKLAWEppg7I8OlMNcOIW/chg64PTIbxhvJri4
+        BAvn5JSksqcT3ULkRJi/7+DJiXVu7BOySg5Cev6M5FEvhUyNagddKJVmFvK5
+        knzagr5wtQyTvXJqc0X+lcYanCUVxugmWjDZPW0xHl++0OmZ9wAAAA==
+    http_version: 
+  recorded_at: Fri, 27 May 2016 11:34:30 GMT
+recorded_with: VCR 3.0.1

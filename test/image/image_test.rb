@@ -29,7 +29,7 @@ describe ImageRights::Image do
 
   describe "uploading an image from a remote path" do 
     before do 
-      @image_path = "http://d26h94e2ysv9hi.cloudfront.net/images/55628b18c5906dc7e100001f/resized_1024_487386_566103.jpg"
+      @image_path = "http://d26h94e2ysv9hi.cloudfront.net/images/56390177c5906d74ed000269/resized_640_083000_452097.jpg"
       @mime_type = 'image/jpg'
 
       @optional_fields = {
