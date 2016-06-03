@@ -77,6 +77,8 @@ module ImageRights
         end
       when 422 
         raise ImageRights::UnprocessableRequest
+      when 503
+        raise ImageRights::RateLimitExceeded
       end
     end
     private_class_method :parse_for_errors
